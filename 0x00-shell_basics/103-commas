@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1a | sort -df | awk '{print $0","}' | tr -d '\n'
+ls -1Ap | awk 'BEGIN{ORS=", "} {if ($0 != "." && $0 != "..") print $0; else print;}' | sed 's/,\s$/\n/'
