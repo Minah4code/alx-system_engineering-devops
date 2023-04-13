@@ -1,2 +1,5 @@
 #!/bin/bash
-chown guillaume betty hello
+if [ "$(id -u)" != "$(stat -c '%u' hello)" ]; then
+    exit
+fi
+chown betty hello
