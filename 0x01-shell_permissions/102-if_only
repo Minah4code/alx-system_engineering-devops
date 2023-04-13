@@ -1,5 +1,2 @@
 #!/bin/bash
-if [ "$(id -u)" != "$(stat -c '%u' hello)" ]; then
-    exit
-fi
-chown betty hello
+sudo chown -h vincent:staff _hello
