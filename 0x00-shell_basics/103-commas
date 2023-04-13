@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1apv | sed ':a;N;$!ba;s/\n/, /g' | sed -e 's/,$/\n/'
+ls -1a | sort -df | awk '{print $0","}' | tr -d '\n'
